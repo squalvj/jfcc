@@ -6,6 +6,18 @@
 	src url(../font/GT-Sectra-Fine-Book-Italic.ttf)
 
 
+button
+	&:hover
+		-webkit-transition: all .25s ease
+		-moz-transition: all .25s ease
+		-ms-transition: all .25s ease
+		-o-transition: all .25s ease
+		transition: all .25s ease
+		color #ed1c24 !important
+		background-color white
+		border 1px solid #ed1c24
+		
+
 body
 	background-color #F1F2F2
 	font-size 12px
@@ -17,7 +29,7 @@ body
 	-moz-font-feature-settings: "kern=1";
 	font-kerning: normal;
 .content-mid
-	margin 18px 0
+	margin 35px 0
 .no-p
 	padding 0
 .no-m
@@ -40,7 +52,23 @@ body
 
 .border-right
 	border-right 1px solid rgba(0,0,0,0.1)
+.border-left
+	border-left 1px solid rgba(0,0,0,0.1)
 
+.flex
+	display flex
+.flex-column
+	flex-direction column
+.flex-wrap
+	flex-wrap wrap
+.no-wrap
+	flex-wrap nowrap
+.just-center
+	justify-content center
+.align-center
+	align-items center
+.flex-row
+	flex-direction row
 .desc
 	font-size 11px
 	font-family "Helvetica"
@@ -57,6 +85,11 @@ body
 		font-size 32px
 		font-weight lighter
 		letter-spacing 0.5px
+.wrapper-item-height
+	height 100%
+.wrapper-item-height-h
+	max-height 673px
+	overflow hidden
 .wrapper-desc
 	min-height 87px
 .p-content
@@ -119,6 +152,9 @@ body
 	font-weight bold
 	a
 		color #414042
+.upcoming
+	max-height 673px
+	overflow hidden
 .inner-upcoming
 	padding 0 15px 12px
 	background-color #f1f2f2
@@ -180,8 +216,15 @@ body
 	margin-bottom 5px
 	font-family "Helvetica"
 	font-weight bolder
-.table
+	letter-spacing 0.7px
+	-webkit-transition: all .25s ease
+	-moz-transition: all .25s ease
+	-ms-transition: all .25s ease
+	-o-transition: all .25s ease
+	transition: all .25s ease
+.tables
 	display table
+	height 100%
 .table-cell
 	display table-cell
 	float none
@@ -193,6 +236,106 @@ body
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	> [class*='col-']
-		display flex
-		flex-direction column
+	// > [class*='col-']
+	// 	display flex
+	// 	flex-direction column
+.gambar
+	width 100%
+	height auto
+.putih
+	background-color white
+.testi-img
+	width 99px
+.sectra-b
+	font-family sectraB
+.h-1
+	font-size 32px
+.subscribe-container
+	min-height 200px
+	padding 15px 0
+	background-color #E6E7E8
+	border 1px solid #BCBEC0
+	border-radius 10px
+	> div
+		padding 0 15px
+	.subscribe-h
+		margin 0
+	.text-subscribe
+		margin 5px 0 15px
+		font-size 15px
+		font-family "Helvetica"
+.input-subscribe
+	input
+		width 300px !important
+.btn-subscribe
+	color white
+	background-color #ED1C24
+	font-family "Helvetica"
+	font-weight bolder
+	text-transform uppercase
+	margin 0 10px
+	font-size 12px
+	letter-spacing 0.7px
+	-webkit-transition: all .25s ease
+	-moz-transition: all .25s ease
+	-ms-transition: all .25s ease
+	-o-transition: all .25s ease
+	transition: all .25s ease
+	&:hover
+		background-color white
+		border 1px solid #ed1c24
+.sponsor
+	min-height 238px
+	background-color white
+	padding-top 40px
+	margin-bottom 0
+	.sponsor-text
+		font-family "Helvetica"
+		font-size 11px
+		font-weight bolder
+		margin-bottom 35px
+.img-sponsor
+	margin 5px 15px
+	
+footer
+	padding 33px 0
+	min-height 325px
+	background-color #1C1B1C
+.wrapper-item-footer
+	ul
+		list-style-type none
+		li
+			margin 2px 0
+			a
+				font-family "Helvetica"
+				font-size 15px
+				color #939598
+				
+.subscribe-input
+	width 300px
+	background-color #414042
+	border 1px solid #D1D3D4
+	width 100% !important
+	color white
+	&:focus
+		border-color: white;
+		outline: 0;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+	
+.flex-between
+	justify-content space-between
+.text-footer
+	margin-top 0
+	margin-bottom 15px
+	color #939598
+.copyright
+	margin-top 58px
+	> div
+		a
+			font-size 15px
+			color #939598
+			margin 0 3px
+	h5
+		color #939598
+		font-size 15px
