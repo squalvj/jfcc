@@ -10,14 +10,89 @@
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="navbar">
+            <div class="container">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbari">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="flex flex-row">
+                        <div class="logo-wrapper">
+                            <img src="assets/img/logo.png">
+                        </div>
+                        <div class="w100 flex rel flex-row nav-kanan border-left">
+                            <div class="collapse navbar-collapse" id="navbari">
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-nested"><a>About <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
+                                        <ul class="border-left border-right">
+                                            <li><a href="#">About JFCC</a></li>
+                                            <li><a href="#">Constitution</a></li>
+                                            <li><a href="#">Executive Committee</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-nested">
+                                        <a>Events <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
+                                        <ul class="border-left border-right">
+                                            <li><a href="#">About JFCC</a></li>
+                                            <li><a href="#">Constitution</a></li>
+                                            <li><a href="#">Executive Committee</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-nested"><a>Membership <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
+                                        <ul class="border-left border-right">
+                                            <li><a href="#">About JFCC</a></li>
+                                            <li><a href="#">Constitution</a></li>
+                                            <li><a href="#">Executive Committee</a></li>
+                                        </ul>
+                                    </li>
+                                      <li class="nav-nested"><a>Scholarship Fund <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
+                                        <ul class="border-left border-right">
+                                            <li><a href="#">About JFCC</a></li>
+                                            <li><a href="#">Constitution</a></li>
+                                            <li><a href="#">Executive Committee</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.php">Sponsorship</a></li>
+                                    <li><a href="about.php">Newsletter</a></li>
+                                    <li><a href="#portfolio">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-wrapper rel flex flex-column">
+                                <div class="text-right">
+                                    <button class="btn hidden-sm btn-signin pull-right">Sign in</button>
+                                    <form class="f-cari pull-right">
+                                        <div class="rel form-group">
+                                            <input type="text" class="form-control" placeholder="Search...">
+                                            <button class="cari abs"><span class="glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="clearfix"></div>
+                                    <div class="wrap-head-social">
+                                        <a href="#"><img src="assets/img/ico-ig-w.png"></a>
+                                        <a href="#"><img src="assets/img/ico-ig-w.png"></a>
+                                        <a href="#"><img src="assets/img/ico-ig-w.png"></a>
+                                        <button class="btn btn-signin btn-signin2">Sign in</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
         <div class="main">
             <div class="content-mid">
                 <div class="container">
                     <div class="home-1 shadow">
-                        <div class="row no-m">
-                            <div class="col-md-6 border-right">
-                                <img class="w100" src="assets/img/sample1.jpg">
+                        <div class="row no-m align-children">
+                            <div class="col-md-6 col-sm-6 border-right">
+                                <img class="w100 gambar" src="assets/img/sample1.jpg">
                                 <div class="wrapper-desc">
                                     <h5 class="desc" ><a href="#">PANEL DICUSSION</a></h5>
                                     <h2 class="title"><a href="#">JFCC Talk on: Pro-ISIS in Indonesia and The Philippines Report</a></h2>
@@ -29,9 +104,9 @@
                                     </h5>
                                 </div> 
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="border-bottom">
-                                    <img class="w100" src="assets/img/sample1.jpg">
+                                    <img class="w100 gambar" src="assets/img/sample1.jpg">
                                     <div class="wrapper-desc">
                                         <h5 class="desc" ><a href="#">PANEL DICUSSION</a></h5>
                                         <h2 class="title title2"><a href="#">JFCC Movie Night: Marlina the murderer in four acts</a></h2>
@@ -43,7 +118,7 @@
                                 </div>
 
                                 <div class="border-bottom">
-                                    <img class="w100" src="assets/img/sample1.jpg">
+                                    <img class="w100 gambar" src="assets/img/sample1.jpg">
                                     <div class="wrapper-desc">
                                         <h5 class="desc" ><a href="#">PANEL DICUSSION</a></h5>
                                         <h2 class="title title2"><a href="#">JFCC Movie Night: Marlina the murderer in four acts</a></h2>
@@ -54,7 +129,7 @@
                                     </div> 
                                 </div>
                             </div>
-                            <div class="col-md-3 no-p-left">
+                            <div class="col-md-3 no-p-left col-xs-12 upcoming">
                                 <div class="wrapper-upcoming">
                                     <h5 class="desc header-upcoming"><a href="#">UPCOMING events</a></h5>
                                     <div class="wrapper-big-upcoming rel">
@@ -115,44 +190,45 @@
                     <div class="row no-m">
                         <div class="col-md-3 no-p-left">
                             <a href="#">
-                                <img class="w100" src="assets/img/sample2.jpg">
+                                <img class="w100 gambar" src="assets/img/sample2.jpg">
                             </a>
                         </div>
-                        <div class="col-md-9 no-p ">
+                        <div class="col-md-9 no-p shadow">
                             <div class="row no-m">
                                 <div class="col-md-12 no-p">
                                     <h5 class="desc member-desc">MEMBERSHIP</h5>
                                 </div>
-
-                                <div class="col-md-4 no-p">
-                                    <div class="wrapper-testimoni membership border-right">
-                                        <div class="wrapper-inside-testimoni rel">
-                                            <p>“In our case, there was no business without the site! Sleepless Media was the only company that within the first meeting made me feel very confident.”<br><br> <span class="red">—Sunaryo Ananto, Member</span></p>
-                                            <div class="circle-clip abs">
-                                                <img class="img-testi" src="assets/img/sample3.png">
+                                <div class="col-md-12 no-p putih">
+                                    <div class="col-md-4 no-p">
+                                        <div class="wrapper-testimoni membership">
+                                            <div class="wrapper-inside-testimoni rel">
+                                                <p>“In our case, there was no business without the site! Sleepless Media was the only company that within the first meeting made me feel very confident.”<br><br> <span class="red">—Sunaryo Ananto, Member</span></p>
+                                                <div class="testi-img circle-clip abs">
+                                                    <img class="img-testi gambar" src="assets/img/sample3.png">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-8 no-p">
-                                    <div class="wrapper-benefit">
-                                        <h5 class="desc inner-desc member-benefit">MEMBER BENEFITS <a class="pull-right" href="#">Show more</a></h5>
-                                        <div class="row wrapper-right-benefit no-m">
-                                            <div class="col-md-6">
-                                                <img class="w100" src="assets/img/sample4.jpg">
-                                                <h2 class="title title2 title-benefit"><a href="#">Hard Rock Cafe Jakarta</a></h2>
-                                                <p class="desc-benefit">
-                                                    15% discount for Food and Beverages , excluding Alcohol
-                                                </p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <img class="w100" src="assets/img/sample4.jpg">
-                                                <h2 class="title title2 title-benefit"><a href="#">Merchandise</a></h2>
-                                                <p class="desc-benefit">The 2011 directory is free for members and can also be purchased for 1,250,000 rupiah.</p>
-                                            </div>
+                                    <div class="col-md-8 no-p">
+                                        <div class="wrapper-benefit border-left">
+                                            <h5 class="desc inner-desc member-benefit">MEMBER BENEFITS <a class="pull-right" href="#">Show more</a></h5>
+                                            <div class="row wrapper-right-benefit no-m">
+                                                <div class="col-md-6">
+                                                    <img class="w100" src="assets/img/sample4.jpg">
+                                                    <h2 class="title title2 title-benefit"><a href="#">Hard Rock Cafe Jakarta</a></h2>
+                                                    <p class="desc-benefit">
+                                                        15% discount for Food and Beverages , excluding Alcohol
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <img class="w100" src="assets/img/sample4.jpg">
+                                                    <h2 class="title title2 title-benefit"><a href="#">Merchandise</a></h2>
+                                                    <p class="desc-benefit">The 2011 directory is free for members and can also be purchased for 1,250,000 rupiah.</p>
+                                                </div>
 
-                                            <div class="col-md-12">
-                                                <button class="btn btn-block btn-join">JOIN US NOW</button>
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-block btn-join">JOIN US NOW</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -165,10 +241,126 @@
 
             <div class="content-mid">
                 <div class="container">
+                    <div class="subscribe-container flex flex-column just-center">
+                        <div class="flex flex-column align-center">
+                            <h5 class="subscribe-h sectra-b h-1 text-center">
+                                Subscribe Our Newsletters
+                            </h5>
+                            <h5 class="text-subscribe text-center">If you would like to receive information about our upcoming events</h5>
+                            <div class="input-subscribe">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <input placeholder="Your Email here..." class="form-control" type="text">
+                                        <button class="btn btn-subscribe">Subsribe</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="content-mid sponsor">
+                <div class="container">
+                    <div class="row no-m">
+                        <h5 class="sponsor-text">AGM SPONSORS:</h5>
+                        <div class="wrapper-item-sponsor flex just-center flex-wrap">
+                            <img class="img img-sponsor" src="assets/img/sample5.jpg">
+                            <img class="img img-sponsor" src="assets/img/sample6.jpg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="container">
+                <div class="row no-m">
+                    <div class="col-md-4 no-p-left">
+                        <div class="wrapper-item-footer">
+                            <ul class="flex no-p flex-column">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Events</a>
+                                </li>
+                                <li>
+                                    <a href="#">Membership</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sponsorship</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contacts</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sign in</a>
+                                </li>
+                                <li>
+                                    <a href="#">Subscribe Newsletter</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wrapper-item-footer">
+                            <ul class="flex no-p flex-column">
+                                <li>
+                                    <a href="#">Advertising</a>
+                                </li>
+                                <li>
+                                    <a href="#">Jobs</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contributors</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cookie Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sitemap</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-footer">
+                            Subscribe Our Newsletter
+                        </h5>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="col-md-10 no-p">
+                                    <input class="form-control subscribe-input" placeholder="your email here">
+                                </div>
+                                <div class="col-md-2 no-p">
+                                    <button class="btn btn-subscribe form-control">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-12 no-p">
+                        <div class="flex flex-row flex-between copyright">
+                            <h5>© 2017 JFCC - Jakarta Foreign Correspondents Club</h5>
+                            <div>
+                                <a href="#">Back to top</a>
+                                <a href="#"><img src="assets/img/ico-ig.png"></a>
+                                <a href="#"><img src="assets/img/ico-fb.png"></a>
+                                <a href="#"><img src="assets/img/ico-tw.png"></a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
         <script type="text/javascript" src="assets/bower_components/jquery/dist/jquery.min.js"></script>
