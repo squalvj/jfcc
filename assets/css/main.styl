@@ -429,6 +429,8 @@ body
 .input-subscribe
 	input
 		width 300px !important
+.wrapper-secondary
+	flex-direction column
 .btn-subscribe
 	color white
 	background-color #ED1C24
@@ -540,6 +542,10 @@ footer
 	.wrap-head-social
 		margin-top 8px
 @media (max-width: 992px)
+	.nav-nested
+				&:hover
+					ul
+						position relative
 	.menu-wrapper
 		flex-direction row
 		width 100%
@@ -555,6 +561,31 @@ footer
 	.nav-nested
 		ul
 			border-bottom 1px solid rgba(0,0,0,0.1)
+	.wrapper-secondary
+		position relative
+		margin-bottom 10px
+		&:after
+			z-index 1
+			content ''
+			position absolute
+			height 100%
+			width 50%
+			left 0
+			border-right 1px solid rgba(0,0,0,0.1)
+		flex-direction row
+		justify-content space-between
+		> div
+			z-index 2
+			width 48%
+			&:first-child
+				border-bottom none
+			&:last-child
+				margin-top 0
+	.upcoming
+		padding-right 0
+	.home-1
+		padding-bottom 0
+				
 	#navbari
 		position absolute
 		background white
@@ -572,9 +603,10 @@ footer
 			display flex
 			flex-direction column
 			width 100%
-	.btn-subscribe
-		margin-left 0
-		margin-top 10px
+	footer
+		.btn-subscribe
+			margin-left 0
+			margin-top 10px
 	.wrap-head-social
 		margin-top 0
 	.nav-kanan
@@ -599,14 +631,12 @@ footer
 		.navbar-nav
 			width 100vw
 		.nav-nested
-			-webkit-transition: all .25s ease
-			-moz-transition: all .25s ease
-			-ms-transition: all .25s ease
-			-o-transition: all .25s ease
-			transition: all .25s ease
 			&:hover
 				ul
 					position relative
+	.wrapper-ads
+		padding-right 0
+		margin-bottom 15px
 	.menu-wrapper
 		padding-right 2px
 	.nav-kanan
@@ -621,3 +651,20 @@ footer
 	.copyright
 		flex-direction column
 		align-items left
+	.content-mid
+		margin 25px 0
+		&:last-child
+			margin 0
+	.wrapper-right-benefit
+		div.col-md-6:first-child
+			margin-bottom: 20px;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+	.input-subscribe
+		.btn-subscribe
+			margin-left 0
+			margin-top 5px
+			width 100%
+	.subscribe-h
+		font-size 28px
+	.img-sponsor
+		margin 10px 15px
