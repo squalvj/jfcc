@@ -336,7 +336,9 @@ body
 	border-radius 12px
 	background-color #E7E5E1
 	padding 16px 19px
+	padding-bottom: 50px;
 	height 75%
+	margin-bottom 50px
 	p
 		font-family sectraBI
 		font-size 18px
@@ -544,6 +546,15 @@ footer
 		justify-content flex-end
 		> .text-right
 			width 100%
+		.sign-in-lg
+			display none
+	.f-cari-right
+		width 90%
+	.sign-in-xs
+		width 90%
+	.nav-nested
+		ul
+			border-bottom 1px solid rgba(0,0,0,0.1)
 	#navbari
 		position absolute
 		background white
@@ -554,7 +565,7 @@ footer
 			text-align left
 			position absolute
 			top 10px
-			left 25px
+			left 15px
 		.navbar-nav
 			border-top 1px solid rgba(0,0,0,0.1)
 			margin-top 100px
@@ -566,10 +577,47 @@ footer
 		margin-top 10px
 	.wrap-head-social
 		margin-top 0
+	.nav-kanan
+		&:before
+			display none
 @media (max-width: 767px)
+	.open
+		position: fixed!important;
+		right: 16px;
+
+	#navbar
+		height 85px
+	.logo-wrapper
+		img
+			margin-top 5px
+			height 80px
+	#navbari
+		//left -134px
+		position fixed
+		width 100vw
+		height 100vh
+		.navbar-nav
+			width 100vw
+		.nav-nested
+			-webkit-transition: all .25s ease
+			-moz-transition: all .25s ease
+			-ms-transition: all .25s ease
+			-o-transition: all .25s ease
+			transition: all .25s ease
+			&:hover
+				ul
+					position relative
+	.menu-wrapper
+		padding-right 2px
+	.nav-kanan
+		&:before
+			display none
+			width 100%
+	.sign-in-xs
+		width 80%
 	.footer-newsletter
 		margin-top 20px
 		padding 0
 	.copyright
 		flex-direction column
-		align-items center
+		align-items left
