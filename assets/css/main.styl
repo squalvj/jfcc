@@ -7,6 +7,8 @@
 @font-face
 	font-family sectraR
 	src url(../font/GT-Sectra-Fine-Regular.ttf)
+$merah = #ED1C24
+$merah2 = 237,28,36
 
 button
 	&:hover
@@ -45,6 +47,8 @@ body
 	padding-right 0
 .abs
 	position absolute
+.h100
+	height 100%
 // hamburg
 #nav-icon2
 	width: 16px;
@@ -244,6 +248,8 @@ body
 		font-size 32px
 		font-weight lighter
 		letter-spacing 0.5px
+		&:hover
+			text-decoration-color rgba($merah2,0.5)
 .wrapper-item-height
 	height 100%
 .wrapper-item-height-h
@@ -296,6 +302,7 @@ body
 		font-family "Helvetica"
 		padding-bottom 20px
 		padding 0
+		margin-bottom 33px
 .big-upcoming
 	margin 5px 0
 	font-family sectraB
@@ -304,6 +311,33 @@ body
 	.big
 		font-size 85px
 		font-family sectraB
+.show-upcoming
+	bottom 0
+	left 0
+	right 0
+	height 80px
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	button
+		z-index 99
+		font-size 11px
+		font-family "Helvetica"
+		font-weight bolder
+		padding 8px
+		background #E6E7E8
+		border 1px solid #BCBEC0
+		width 90%
+		letter-spacing 0.7
+	.o
+		content ''
+		position absolute
+		height 100%
+		width 100%
+		bottom 0
+		background linear-gradient(transparent,#F1F2F2)
+		
 .inner-desc
 	padding 12px 15px
 	margin 0
@@ -541,6 +575,9 @@ footer
 		display inline
 	.wrap-head-social
 		margin-top 8px
+	.wrapper-big-upcoming
+		p
+			margin-bottom 10px
 @media (max-width: 992px)
 	.nav-nested
 				&:hover
