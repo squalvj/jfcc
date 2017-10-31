@@ -284,7 +284,8 @@ body
 		margin-top 13px
 		border none
 .shadow
-	box-shadow: 0px 0px 35px -15px black;
+	//box-shadow: 0px 0px 35px -15px black;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
 .header-upcoming
 	background-color black
 	margin 0
@@ -314,6 +315,7 @@ body
 .show-upcoming
 	bottom 0
 	left 0
+	z-index: 10;
 	right 0
 	height 80px
 	display: flex;
@@ -565,6 +567,62 @@ footer
 	@media (max-width:992px)
 		display block
 	
+.wrapper-left-right
+	margin 25px 0
+.content-left
+	width 80%
+	padding-right 15px
+	.navigasi
+		padding 10px 15px
+		border-bottom 1px solid rgba(0,0,0,0.1)
+		font-family "Helvetica"
+		font-size 11px
+		font-weight bold
+		color #BCBEC0
+		a
+			font-family inherit
+			color inherit
+			font-size inherit
+			font-weight inherit
+			letter-spacing 0.7px
+			margin 0 5px
+		a.active
+			color $merah
+	.inside-left
+		background white
+		.wrapper-item-groups
+			padding 0 30px
+			.flex
+				flex-direction row
+				flex-wrap wrap
+				align-items center
+			.wrapper-item-sponsor
+				border-bottom 1px solid rgba(0,0,0,0.1)
+				padding 40px 0
+				&:first-child
+					padding-top 20px
+				img
+					margin 15px
+				h1
+					font-family sectraB
+					font-size 40px
+					color #414042
+					margin-bottom 25px
+				p
+					font-family "Helvetica"
+					font-size 15px
+					&.col
+						color #939598
+				.btn-become-sponsor
+					background-color #E6E7E8
+					color #414042
+					border 1px solid rgba(0,0,0,0.1)
+					font-weight bold
+					font-family "Helvetica"
+					font-size 13px
+					margin-top 50px
+.content-right
+	width 330px
 
 @media (max-width: 1200px)
 	.menu-wrapper
@@ -579,6 +637,11 @@ footer
 		p
 			margin-bottom 10px
 @media (max-width: 992px)
+	.content-left
+		width 100%
+		padding-right 0
+	.content-right
+		display none
 	.nav-nested
 				&:hover
 					ul
