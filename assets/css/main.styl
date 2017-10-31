@@ -45,6 +45,83 @@ body
 	padding-right 0
 .abs
 	position absolute
+// hamburg
+#nav-icon2
+	width: 16px;
+	height: 30px;
+	position: relative;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	span
+		display block
+		position absolute
+		height 3px
+		width 50%
+		background #ed1c24
+		opacity 1
+		-webkit-transform rotate(0deg)
+		-moz-transform rotate(0deg)
+		-o-transform rotate(0deg)
+		transform rotate(0deg)
+		-webkit-transition .25s ease-in-out
+		-moz-transition .25s ease-in-out
+		-o-transition .25s ease-in-out
+		transition .25s ease-in-out
+		&:nth-child(even)
+			left 50%
+			border-radius 0 9px 9px 0
+		&:nth-child(odd)
+			left 0px
+			border-radius 9px 0 0 9px
+	&.open
+		span
+			&:nth-child(1)
+				left 1px
+				top 6px
+			&:nth-child(2)
+				left calc(50% - 3px)
+				top 6px
+			&:nth-child(3)
+				left -50%
+				opacity 0
+			&:nth-child(4)
+				left 100%
+				opacity 0
+			&:nth-child(5)
+				left 1px
+				top 11px
+			&:nth-child(6)
+				left calc(50% - 3px)
+				top 11px
+
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2)
+	top 0px
+
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4)
+	top 6px
+
+#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6)
+	top 12px
+
+#nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6)
+	-webkit-transform rotate(45deg)
+	-moz-transform rotate(45deg)
+	-o-transform rotate(45deg)
+	transform rotate(45deg)
+
+#nav-icon2.open span:nth-child(2),#nav-icon2.open span:nth-child(5)
+	-webkit-transform rotate(-45deg)
+	-moz-transform rotate(-45deg)
+	-o-transform rotate(-45deg)
+	transform rotate(-45deg)
+
 // home
 
 .home-1
@@ -145,8 +222,11 @@ body
 .navbar
 	margin-bottom 0
 	border none
-#navbari
-	width 100%
+.navbar-cols
+	display: block
+	height: auto
+	padding-bottom: 0;
+	overflow: visible
 
 .desc
 	font-size 11px
@@ -256,7 +336,9 @@ body
 	border-radius 12px
 	background-color #E7E5E1
 	padding 16px 19px
+	padding-bottom: 50px;
 	height 75%
+	margin-bottom 50px
 	p
 		font-family sectraBI
 		font-size 18px
@@ -347,6 +429,8 @@ body
 .input-subscribe
 	input
 		width 300px !important
+.wrapper-secondary
+	flex-direction column
 .btn-subscribe
 	color white
 	background-color #ED1C24
@@ -441,6 +525,12 @@ footer
 	margin-top 15px
 .btn-signin2
 	display none
+.navbar-hamburg
+	z-index 10
+	display none
+	@media (max-width:992px)
+		display block
+	
 
 @media (max-width: 1200px)
 	.menu-wrapper
@@ -451,5 +541,133 @@ footer
 		display inline
 	.wrap-head-social
 		margin-top 8px
-// @media (max-width: 992px)
-// 	.menu-wrapper
+@media (max-width: 992px)
+	.nav-nested
+				&:hover
+					ul
+						position relative
+	.menu-wrapper
+		flex-direction row
+		width 100%
+		justify-content flex-end
+		> .text-right
+			width 100%
+		.sign-in-lg
+			display none
+	.f-cari-right
+		width 90%
+	.sign-in-xs
+		width 90%
+	.nav-nested
+		ul
+			border-bottom 1px solid rgba(0,0,0,0.1)
+	.wrapper-secondary
+		position relative
+		margin-bottom 10px
+		&:after
+			z-index 1
+			content ''
+			position absolute
+			height 100%
+			width 50%
+			left 0
+			border-right 1px solid rgba(0,0,0,0.1)
+		flex-direction row
+		justify-content space-between
+		> div
+			z-index 2
+			width 48%
+			&:first-child
+				border-bottom none
+			&:last-child
+				margin-top 0
+	.upcoming
+		padding-right 0
+	.home-1
+		padding-bottom 0
+				
+	#navbari
+		position absolute
+		background white
+		left 0
+		z-index 9
+		width 100%
+		.text-right
+			text-align left
+			position absolute
+			top 10px
+			left 15px
+		.navbar-nav
+			border-top 1px solid rgba(0,0,0,0.1)
+			margin-top 100px
+			display flex
+			flex-direction column
+			width 100%
+	footer
+		.btn-subscribe
+			margin-left 0
+			margin-top 10px
+	.wrap-head-social
+		margin-top 0
+	.nav-kanan
+		&:before
+			display none
+@media (max-width: 767px)
+	.sponsor
+		.just-center
+			justify-content flex-start
+	.open
+		position: fixed!important;
+		right: 16px;
+
+	#navbar
+		height 85px
+	.logo-wrapper
+		img
+			margin-top 5px
+			height 80px
+	#navbari
+		//left -134px
+		position fixed
+		width 100vw
+		height 100vh
+		.navbar-nav
+			width 100vw
+		.nav-nested
+			&:hover
+				ul
+					position relative
+	.wrapper-ads
+		padding-right 0
+		margin-bottom 15px
+	.menu-wrapper
+		padding-right 2px
+	.nav-kanan
+		&:before
+			display none
+			width 100%
+	.sign-in-xs
+		width 80%
+	.footer-newsletter
+		margin-top 20px
+		padding 0
+	.copyright
+		flex-direction column
+		align-items left
+	.content-mid
+		margin 25px 0
+		&:last-child
+			margin 0
+	.wrapper-right-benefit
+		div.col-md-6:first-child
+			margin-bottom: 20px;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+	.input-subscribe
+		.btn-subscribe
+			margin-left 0
+			margin-top 5px
+			width 100%
+	.subscribe-h
+		font-size 28px
+	.img-sponsor
+		margin 10px 15px
