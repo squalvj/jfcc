@@ -338,7 +338,7 @@ body
 		height 100%
 		width 100%
 		bottom 0
-		background linear-gradient(transparent,#F1F2F2)
+		background linear-gradient(to bottom,transparent,#F1F2F2)
 		
 .inner-desc
 	padding 12px 15px
@@ -427,10 +427,7 @@ body
 	display table-cell
 	float none
 .align-children
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
+	-webkit-display flex
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -623,6 +620,28 @@ footer
 					margin-top 50px
 .content-right
 	width 330px
+
+.upcoming-top
+	padding 0 15px !important
+	margin-bottom 15px
+	.wrapper-upcoming
+		.wrapper-big-upcoming
+			display flex
+			flex-direction row
+			justify-content space-between
+			align-items center
+			> *
+				margin 15px !important
+				&:first-child
+					margin-left 0 !important
+				&:last-child
+					margin-right 0 !important
+			.big-upcoming
+				margin 15px 0
+	.inner-desc
+		margin-top 0 !important
+		background white
+		border-bottom 1px solid rgba(0,0,0,0.1)
 
 @media (max-width: 1200px)
 	.menu-wrapper
