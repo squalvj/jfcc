@@ -10,6 +10,9 @@
 $merah = #ED1C24
 $merah2 = 237,28,36
 
+html
+	overflow-x hidden
+
 button
 	&:hover
 		-webkit-transition: all .25s ease
@@ -33,6 +36,7 @@ body
 	-moz-font-feature-settings: "kern=1";
 	font-kerning: normal;
 	overflow-x: hidden;
+	height auto
 .content-mid
 	margin 35px 0
 .no-p
@@ -157,6 +161,8 @@ body
 #navbar
 	background-color white	
 	height 120px
+	max-width 100vw
+	
 .nav-kanan
 	//padding 15px 0
 	&:before
@@ -188,11 +194,11 @@ body
 		display none
 	ul
 		display none
-		width max-content
-		bottom -155%
+		min-width 240px
+		top 59px
 		position absolute
+		border-bottom 1px solid rgba(0,0,0,0.1)
 		li
-			margin-right 28px
 			margin-bottom 5px
 			a
 				font-family sectraR
@@ -201,11 +207,14 @@ body
 				color rgba(65,64,66,0.9)
 				letter-spacing 0.7px
 				margin-right 5px
+				min-width 200%
 	&:hover
 		&:before
 			display block
 			left -1px
 		ul
+			
+			border-bottom 1px solid rgba(0,0,0,0.1)
 			display block
 			position absolute
 			list-style-type none
@@ -215,7 +224,7 @@ body
 			height auto
 			left: -1px;
 			padding-left: 15px;
-			padding-right 100px
+			padding-right 30px
 .logo-wrapper
 	width 161px
 	margin-right 15px
@@ -296,7 +305,7 @@ body
 	padding 1px 15px
 	background-color #1C1B1C
 	color white
-	p
+	> a
 		font-size 16px
 		font-weight lighter
 		color #939598
@@ -304,6 +313,7 @@ body
 		padding-bottom 20px
 		padding 0
 		margin-bottom 33px
+		display block
 .big-upcoming
 	margin 5px 0
 	font-family sectraB
@@ -313,6 +323,7 @@ body
 		font-size 85px
 		font-family sectraB
 .show-upcoming
+	width calc(100% - 15px)
 	bottom 0
 	left 0
 	z-index: 10;
@@ -337,8 +348,9 @@ body
 		position absolute
 		height 100%
 		width 100%
+		left 0
 		bottom 0
-		background linear-gradient(to bottom,transparent,#F1F2F2)
+		background linear-gradient(to bottom,rgba(252, 252, 252, 0),#F1F2F2)
 		
 .inner-desc
 	padding 12px 15px
@@ -427,10 +439,11 @@ body
 	display table-cell
 	float none
 .align-children
+	display flex
 	-webkit-display flex
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	flex-wrap nowrap
 	// > [class*='col-']
 	// 	display flex
 	// 	flex-direction column
@@ -620,9 +633,11 @@ footer
 					margin-top 50px
 .content-right
 	width 330px
+	.show-upcoming
+		width 100%
 
 .upcoming-top
-	padding 0 15px !important
+	padding 0 15px
 	margin-bottom 15px
 	.wrapper-upcoming
 		.wrapper-big-upcoming
@@ -642,6 +657,8 @@ footer
 		margin-top 0 !important
 		background white
 		border-bottom 1px solid rgba(0,0,0,0.1)
+		
+// ------------------------------------------------------------------------------------------------------------------------
 
 @media (max-width: 1200px)
 	.menu-wrapper
@@ -656,11 +673,18 @@ footer
 		p
 			margin-bottom 10px
 @media (max-width: 992px)
+	.wrapper-left-right
+		flex-direction column
+		.content-right
+			width 100%
+			> div
+				padding 0
+				margin-top 25px
+	.align-children
+		flex-wrap wrap
 	.content-left
 		width 100%
 		padding-right 0
-	.content-right
-		display none
 	.nav-nested
 				&:hover
 					ul
@@ -679,6 +703,7 @@ footer
 		width 90%
 	.nav-nested
 		ul
+			top 0
 			border-bottom 1px solid rgba(0,0,0,0.1)
 	.wrapper-secondary
 		position relative
@@ -731,7 +756,18 @@ footer
 	.nav-kanan
 		&:before
 			display none
+	.show-upcoming
+		bottom 0
+		button
+			width 95%
 @media (max-width: 767px)
+	#kanan
+		.upcoming-top
+			padding 0
+	.upcoming-top
+		padding-right 15px
+	.content-right
+		display none
 	.sponsor
 		.just-center
 			justify-content flex-start
